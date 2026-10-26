@@ -74,7 +74,7 @@ const categoriesEl = document.getElementById('categories');
 const searchEl = document.getElementById('search');
 const emptyEl = document.getElementById('empty');
 
-function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'').replace(/^-|-$/g,'');}
 
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 const dishImageExtensions = ['jpg', 'jpeg', 'avif', 'webp'];
