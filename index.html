@@ -185,17 +185,17 @@ searchEl.addEventListener('input',e=>render(e.target.value));
 
 async function loadMenu(){
   try {
-    const response = await fetch('data.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`Could not load data.json (HTTP ${response.status})`);
+    const response = await fetch('menu-data.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Could not load menu-data.json (HTTP ${response.status})`);
     menu = await response.json();
     if (!menu || typeof menu !== 'object' || Array.isArray(menu)) {
-      throw new Error('data.json must contain an object of categories and menu items.');
+      throw new Error('menu-data.json must contain an object of categories and menu items.');
     }
     renderCategories();
     render(searchEl.value);
   } catch (error) {
     console.error('Menu loading error:', error);
-    menuEl.innerHTML = '<p class="empty" style="display:block">Unable to load the menu. Please make sure data.json is beside index.html and run this site using a local web server.</p>';
+    menuEl.innerHTML = '<p class="empty" style="display:block">Unable to load the menu. Please make sure menu-data.json is beside index.html and run this site using a local web server.</p>';
     emptyEl.style.display = 'none';
   }
 }
