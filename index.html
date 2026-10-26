@@ -77,10 +77,22 @@ const emptyEl = document.getElementById('empty');
 function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
 
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function dishImagePath(name){
- // Load the dish photo from this website's local images/ folder.
+const dishImageExtensions = ['jpg', 'jpeg', 'avif', 'webp'];
+function dishImagePath(name, extension='jpg'){
+ // Try supported local image formats in images/: jpg, jpeg, avif, and webp.
  // Example: "Masala Dosa" -> images/masala-dosa.jpg
- return `images/${slug(name)}.jpg`;
+ return `images/${slug(name)}.${extension}`;
+}
+function loadDishImage(img, name, extensionIndex=0){
+ // If the current file extension does not exist, try the next supported format.
+ if(extensionIndex >= dishImageExtensions.length){
+   img.style.display='none';
+   if(img.nextElementSibling) img.nextElementSibling.style.display='flex';
+   return;
+ }
+ img.dataset.extensionIndex=String(extensionIndex);
+ img.onerror=()=>loadDishImage(img, name, extensionIndex+1);
+ img.src=dishImagePath(name, dishImageExtensions[extensionIndex]);
 }
 function dishSearchTerms(name,category){
  // Use real photos from Flickr's public image search proxy (not AI-generated artwork).
@@ -134,8 +146,9 @@ function render(filter=''){
     const grid=document.createElement('div'); grid.className='grid';
     filtered.forEach(x=>{
       const card=document.createElement('div'); card.className='item';
-      const imgPath = dishImagePath(x.name);
-      card.innerHTML=`<img class="dish-photo" loading="lazy" decoding="async" alt="${escapeHtml(x.name)}" src="${imgPath}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="dish-fallback" aria-hidden="true">${dishEmoji(cat,x.name)}</span><div class="dish-copy"><span class="name">${escapeHtml(x.name)}</span></div><span class="price">₹${x.price}</span>`;
+      card.innerHTML=`<img class="dish-photo" loading="lazy" decoding="async" alt="${escapeHtml(x.name)}"><span class="dish-fallback" aria-hidden="true">${dishEmoji(cat,x.name)}</span><div class="dish-copy"><span class="name">${escapeHtml(x.name)}</span></div><span class="price">₹${x.price}</span>`;
+      const dishImg=card.querySelector('.dish-photo');
+      loadDishImage(dishImg, x.name);
       grid.appendChild(card);
     });
     section.appendChild(grid); menuEl.appendChild(section);
