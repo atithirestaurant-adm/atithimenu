@@ -1,5 +1,5 @@
 {
-  "Breakfast": [
+  "Breakfast & South Indian": [
     {
       "name": "Upma",
       "price": 50
@@ -95,7 +95,41 @@
       "price": 50
     }
   ],
-  "Starters": [
+  "Soups": [
+    {
+      "name": "Veg Manchow Soup",
+      "price": 160
+    },
+    {
+      "name": "Veg Mai Tai Soup",
+      "price": 160
+    },
+    {
+      "name": "Veg Sweet Corn Soup",
+      "price": 160
+    },
+    {
+      "name": "Veg Hot & Sour Soup",
+      "price": 160
+    },
+    {
+      "name": "Tomato Soup",
+      "price": 160
+    },
+    {
+      "name": "Mushroom Soup",
+      "price": 160
+    },
+    {
+      "name": "Clear Soup",
+      "price": 160
+    },
+    {
+      "name": "Lemon Coriander Soup",
+      "price": 160
+    }
+  ],
+  "Vegetarian Starters": [
     {
       "name": "Mushroom Butter Garlic",
       "price": 250
@@ -193,41 +227,7 @@
       "price": 300
     }
   ],
-  "Soups": [
-    {
-      "name": "Veg Manchow Soup",
-      "price": 160
-    },
-    {
-      "name": "Veg Mai Tai Soup",
-      "price": 160
-    },
-    {
-      "name": "Veg Sweet Corn Soup",
-      "price": 160
-    },
-    {
-      "name": "Veg Hot & Sour Soup",
-      "price": 160
-    },
-    {
-      "name": "Tomato Soup",
-      "price": 160
-    },
-    {
-      "name": "Mushroom Soup",
-      "price": 160
-    },
-    {
-      "name": "Clear Soup",
-      "price": 160
-    },
-    {
-      "name": "Lemon Coriander Soup",
-      "price": 160
-    }
-  ],
-  "Thava Roti": [
+  "Indian Breads & Roti": [
     {
       "name": "Akki Roti Curry",
       "price": 120
@@ -251,9 +251,7 @@
     {
       "name": "Akki Roti (1)",
       "price": 35
-    }
-  ],
-  "Tandoori": [
+    },
     {
       "name": "Roti",
       "price": 40
@@ -279,7 +277,7 @@
       "price": 150
     }
   ],
-  "Main Course": [
+  "Vegetarian Main Course": [
     {
       "name": "Mix Veg Curry",
       "price": 160
@@ -389,7 +387,7 @@
       "price": 180
     }
   ],
-  "Rice & Noodles": [
+  "Chinese Rice": [
     {
       "name": "Veg Fried Rice",
       "price": 150
@@ -421,7 +419,9 @@
     {
       "name": "Mushroom Paneer Fried Rice",
       "price": 230
-    },
+    }
+  ],
+  "Noodles": [
     {
       "name": "Veg Noodles",
       "price": 180
@@ -431,7 +431,7 @@
       "price": 200
     }
   ],
-  "Rice & Biryani": [
+  "Rice, Pulao & Biryani": [
     {
       "name": "Veg Biryani",
       "price": 150
@@ -473,7 +473,7 @@
       "price": 60
     }
   ],
-  "Meals / Thali (Limited)": [
+  "Meals & Thali": [
     {
       "name": "South Indian Meals (Limited)",
       "price": 160
@@ -487,7 +487,7 @@
       "price": 220
     }
   ],
-  "Fruit Juices": [
+  "Fresh Fruit Juices": [
     {
       "name": "Orange Juice",
       "price": 80
@@ -521,7 +521,7 @@
       "price": 120
     }
   ],
-  "Fresh Lime": [
+  "Fresh Lime & Soda": [
     {
       "name": "Lime Soda",
       "price": 50
@@ -531,7 +531,7 @@
       "price": 40
     }
   ],
-  "Milk Shakes": [
+  "Milkshakes": [
     {
       "name": "Apple Milkshake",
       "price": 130
@@ -579,7 +579,7 @@
       "price": 130
     }
   ],
-  "Specials": [
+  "Desserts & Specials": [
     {
       "name": "Gudbud",
       "price": 180
