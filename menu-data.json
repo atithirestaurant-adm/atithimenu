@@ -490,27 +490,27 @@
   "Fresh Fruit Juices": [
     {
       "name": "Orange Juice",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Watermelon",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Musk Melon",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Pineapple",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Papaya",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Mosambi",
-      "price": 80
+      "price": 90
     },
     {
       "name": "Apple Juice",
@@ -524,17 +524,17 @@
   "Fresh Lime & Soda": [
     {
       "name": "Lime Soda",
-      "price": 50
+      "price": 60
     },
     {
       "name": "Lime Juice",
-      "price": 40
+      "price": 50
     }
   ],
   "Milkshakes": [
     {
       "name": "Apple Milkshake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Pomegranate Shake",
@@ -542,15 +542,15 @@
     },
     {
       "name": "Musk Melon Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Papaya Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Chikoo Milkshake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Rose Milk",
@@ -560,23 +560,23 @@
   "Ice Cream Shakes": [
     {
       "name": "Strawberry Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Vanilla Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Chocolate Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Butterscotch Shake",
-      "price": 130
+      "price": 150
     },
     {
       "name": "Mango Shake",
-      "price": 130
+      "price": 150
     }
   ],
   "Desserts & Specials": [
