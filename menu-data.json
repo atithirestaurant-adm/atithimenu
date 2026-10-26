@@ -84,7 +84,7 @@
     },
     {
       "name": "Special Coffee / Tea / Milk",
-      "price": 50
+      "price": 35
     },
     {
       "name": "Badam Milk",
@@ -593,7 +593,7 @@
       "price": 130
     },
     {
-      "name": "Fruit Salad with Ice Cream",
+      "name": "Fruit Salad With Ice Cream",
       "price": 160
     }
   ]
