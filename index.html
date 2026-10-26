@@ -78,20 +78,46 @@ function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-
 
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 const dishImageExtensions = ['jpg', 'jpeg', 'avif', 'webp'];
-function dishImageNames(name){
- // Support filenames such as baby-corn-manchurian, GobiManchurian, and upma.
- // Also split camelCase names so "GobiManchurian" can match "Gobi Manchurian".
- const original = String(name || '').trim().replace(/([a-z0-9])([A-Z])/g, '$1 $2');
- const words = original.normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-   .replace(/[^a-zA-Z0-9]+/g, ' ').trim().split(/\s+/).filter(Boolean);
- const candidates = [
-   slug(original),
-   words.join('').toLowerCase(),
-   words.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(''),
-   words.map(w => w.toLowerCase()).join(' '),
-   String(name || '').trim()
- ];
- return [...new Set(candidates.filter(Boolean))];
+function dishImageNames(name) {
+    // Remove quantities such as (2), (4), etc.
+    const cleanedName = String(name || '')
+        .trim()
+        .replace(/\s*\(\d+\)\s*/g, ' ')
+        .trim();
+
+    // Handle PascalCase names such as GobiManchurian
+    const normalized = cleanedName.replace(
+        /([a-z0-9])([A-Z])/g,
+        '$1 $2'
+    );
+
+    const words = normalized
+        .replace(/[^a-zA-Z0-9]+/g, ' ')
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean);
+
+    const candidates = [
+        // parota-curry
+        words.map(w => w.toLowerCase()).join('-'),
+
+        // parotacurry
+        words.join('').toLowerCase(),
+
+        // ParotaCurry
+        words.map(w =>
+            w.charAt(0).toUpperCase() +
+            w.slice(1).toLowerCase()
+        ).join(''),
+
+        // parota curry
+        words.map(w => w.toLowerCase()).join(' '),
+
+        // parota_curry
+        words.map(w => w.toLowerCase()).join('_')
+    ];
+
+    return [...new Set(candidates)];
 }
 function dishImagePath(name, extension='jpg', nameIndex=0){
  const candidates = dishImageNames(name);
