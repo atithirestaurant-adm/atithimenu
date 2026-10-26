@@ -15,19 +15,19 @@ header{position:relative;overflow:hidden;background:radial-gradient(ellipse at 8
 h1{position:relative;z-index:1;font:600 clamp(32px,7vw,52px) 'Playfair Display',Georgia,serif;margin:8px 0 5px;letter-spacing:1.5px;color:#fff8e8}.tag{position:relative;z-index:1;color:var(--gold-light);letter-spacing:2.5px;font-size:11px;font-weight:600}.line{position:relative;z-index:1;width:76px;height:2px;background:var(--gold);margin:15px auto 0}
 .controls{position:sticky;top:0;z-index:20;background:rgba(255,248,237,.96);backdrop-filter:blur(10px);padding:12px 12px 10px;border-bottom:1px solid var(--border);box-shadow:0 5px 18px rgba(100,20,10,.06)}.search{display:block;width:min(680px,100%);margin:0 auto 11px;padding:14px 18px;border:1px solid #f0c38d;border-radius:8px;background:var(--paper);font:500 15px 'DM Sans',sans-serif;color:var(--ink);outline:none;box-shadow:0 2px 8px rgba(100,20,10,.04)}.search:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,92,.16)}
 .categories{display:flex;gap:8px;overflow-x:auto;max-width:1100px;margin:auto;padding:1px 1px 4px;scrollbar-width:thin}.categories a{white-space:nowrap;text-decoration:none;color:var(--forest);border:1px solid #f2b86d;background:#fffdf8;border-radius:5px;padding:9px 13px;font-size:12px;font-weight:700;transition:background .2s,color .2s,border-color .2s}.categories a:hover,.categories a:focus{background:var(--forest);border-color:var(--forest);color:#fff8e8}
-main{width:min(1100px,100%);margin:auto;padding:25px 16px 58px}.category{scroll-margin-top:150px;margin-bottom:36px}.category h2{text-align:center;color:var(--forest);font:600 28px 'Playfair Display',Georgia,serif;margin:8px 0 18px}.category h2:after{content:"";display:block;width:52px;height:2px;background:var(--gold);margin:10px auto 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.item{background:var(--paper);border:1px solid var(--border);border-left:3px solid #f07818;border-radius:7px;padding:14px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 14px rgba(100,20,10,.035);transition:transform .18s ease,box-shadow .18s ease}.item:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(100,20,10,.09)}.name{font-size:14px;line-height:1.4;font-weight:500}.price{font-size:15px;font-weight:700;color:var(--forest);white-space:nowrap;font-variant-numeric:tabular-nums}.empty{display:none;text-align:center;color:var(--muted);padding:35px}
+main{width:min(1100px,100%);margin:auto;padding:25px 16px 58px}.category{scroll-margin-top:150px;margin-bottom:36px}.category h2{text-align:center;color:var(--forest);font:600 28px 'Playfair Display',Georgia,serif;margin:8px 0 18px}.category h2:after{content:"";display:block;width:52px;height:2px;background:var(--gold);margin:10px auto 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.item{background:var(--paper);border:1px solid var(--border);border-left:3px solid #f07818;border-radius:9px;padding:10px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 14px rgba(100,20,10,.035);transition:transform .18s ease,box-shadow .18s ease;min-width:0}.dish-photo{width:104px;height:78px;flex:0 0 104px;object-fit:cover;border-radius:7px;background:#fff0d6}.dish-copy{flex:1;min-width:0}.dish-fallback{display:none;width:104px;height:78px;flex:0 0 104px;border-radius:7px;background:#fff0d6;align-items:center;justify-content:center;font-size:30px}.item .name{display:block;font-size:14px;line-height:1.4;font-weight:600}.item .price{font-size:15px;font-weight:700;color:var(--forest);white-space:nowrap;font-variant-numeric:tabular-nums;margin-left:auto}.item:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(100,20,10,.09)}.name{font-size:14px;line-height:1.4;font-weight:500}.price{font-size:15px;font-weight:700;color:var(--forest);white-space:nowrap;font-variant-numeric:tabular-nums}.empty{display:none;text-align:center;color:var(--muted);padding:35px}
 .note{background:#fff0d6;border:1px solid #f5c66c;border-radius:8px;padding:17px 19px;margin:5px 0 30px;color:#5d3529;font-size:13px;line-height:1.7}.note strong{color:var(--forest)}footer{background:linear-gradient(135deg,#8f0010,#c90016);color:var(--gold-light);text-align:center;padding:30px 15px 32px;font-size:13px;line-height:1.8;border-top:3px solid var(--gold)}footer strong{color:#fff8e8;font:600 24px 'Playfair Display',Georgia,serif;letter-spacing:.5px}
 @media(max-width:620px){
 header{display:flex;align-items:center;justify-content:flex-start;text-align:left;gap:16px;padding:18px 15px;min-height:126px}
 header:after{inset:7px}
 .logo{flex:0 0 88px;width:88px;height:88px;max-width:88px;margin:0;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
-.brand-copy{min-width:0;flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;z-index:1}
+.brand-copy{min-width:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:1}
 header h1{font-size:clamp(21px,5.5vw,29px);line-height:1.12;letter-spacing:.2px;margin:0 0 8px;overflow-wrap:normal}
-header .tag{font-size:clamp(8px,2.3vw,10px);letter-spacing:1px;line-height:1.45;white-space:normal}
-header .line{width:54px;height:3px;margin:9px 0 0;flex-shrink:0}
+header .tag{font-size:clamp(8px,2.3vw,10px);letter-spacing:1px;line-height:1.45;white-space:normal;text-align:center;width:100%}
+header .line{width:54px;height:3px;margin:9px auto 0;flex-shrink:0;align-self:center}
 .controls{padding:10px 9px 8px}.categories{gap:6px}.categories a{padding:8px 11px;font-size:11px}
 main{padding:21px 12px 42px}.category{margin-bottom:30px;scroll-margin-top:138px}.category h2{font-size:25px}
-.grid{grid-template-columns:1fr;gap:9px}.item{padding:14px 13px}.name{font-size:14px}.price{font-size:15px}
+.grid{grid-template-columns:1fr;gap:9px}.item{padding:9px;gap:10px}.dish-photo,.dish-fallback{width:88px;height:72px;flex-basis:88px}.name{font-size:14px}.price{font-size:15px}
 .note{padding:14px;font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.item{transition:none}}
@@ -76,6 +76,47 @@ const emptyEl = document.getElementById('empty');
 
 function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
 
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function dishImagePath(name){
+ // Load the dish photo from this website's local images/ folder.
+ // Example: "Masala Dosa" -> images/masala-dosa.jpg
+ return `images/${slug(name)}.jpg`;
+}
+function dishSearchTerms(name,category){
+ // Use real photos from Flickr's public image search proxy (not AI-generated artwork).
+ // Keep the dish name as the leading query so each card requests a photo of that item.
+ const n=name.toLowerCase().replace(/\(.*?\)/g,'').trim();
+ const exact={
+  'masala dosa':'masala dosa indian food', 'plain dosa':'plain dosa south indian food',
+  'set masala':'set dosa masala south indian food', 'set dosa':'set dosa south indian food',
+  'ghee roast':'ghee roast dosa', 'ghee roast masala':'ghee roast masala dosa',
+  'idly':'idli sambar chutney', 'idli':'idli sambar chutney', 'vada':'medu vada sambar',
+  'upma':'upma indian breakfast', 'poori':'poori bhaji indian food', 'buns':'mangalore buns food',
+  'kesari bath':'kesari bath indian dessert', 'rava idly':'rava idli south indian food',
+  'rice bath':'south indian rice bath', 'sweet kadubu':'sweet kadubu karnataka food',
+  'bajji':'indian bajji fritters', 'coffee':'indian filter coffee', 'badam milk':'badam milk indian drink',
+  'horlicks':'horlicks hot drink', 'veg biryani':'vegetable biryani', 'mushroom biryani':'mushroom biryani',
+  'paneer biryani':'paneer biryani', 'veg fried rice':'vegetable fried rice', 'veg noodles':'vegetable hakka noodles',
+  'south indian meals (limited)':'south indian meals thali', 'south indian special meals (limited)':'south indian special meals thali',
+  'combo meals (limited)':'indian vegetarian combo meal', 'french fries':'french fries plate',
+  'gudbud':'gudbud ice cream dessert', 'falooda':'falooda dessert', 'fruit salad with ice cream':'fruit salad ice cream'
+ };
+ if(exact[n]) return exact[n];
+ if(/soup/.test(n)) return n+' soup bowl';
+ if(/paneer/.test(n)) return n+' paneer indian dish';
+ if(/mushroom/.test(n)) return n+' mushroom food';
+ if(/baby corn|gobi|cauli|manchurian|chilly|chilli|pepper dry|kung pow|potato|aloo jeera/.test(n)) return n+' indo chinese indian food';
+ if(/naan|roti|chapathi|parota|kulcha|akki/.test(n)) return n+' indian bread';
+ if(/biryani|pulao|fried rice|jeera rice|ghee rice|khichdi|curd rice|plain rice|rice bath/.test(n)) return n+' indian rice dish';
+ if(/noodles/.test(n)) return n+' indian chinese noodles';
+ if(/meals|thali|combo/.test(n)) return 'south indian thali meals';
+ if(/juice|lime|soda|shake|milkshake|falooda|gudbud|salad|ice cream/.test(n)) return n+' drink dessert';
+ if(/coffee|tea|milk|horlicks/.test(n)) return n+' indian drink';
+ return n+' indian vegetarian food';
+}
+function dishEmoji(category,name){const n=name.toLowerCase();if(/juice|lime|soda|shake|milkshake|coffee|tea|milk/.test(n))return '🥤';if(/soup/.test(n))return '🍲';if(/dosa|roti|naan|chapathi|parota|kulcha|poori/.test(n))return '🫓';if(/rice|biryani|pulao|bath|khichdi/.test(n))return '🍚';if(/ice cream|falooda|gudbud|salad/.test(n))return '🍨';if(/idli|vada|upma|bajji/.test(n))return '🍽️';return '🍛';}
+
+
 Object.keys(menu).forEach(cat=>{
   const a=document.createElement('a'); a.href='#'+slug(cat); a.textContent=cat; categoriesEl.appendChild(a);
 });
@@ -93,7 +134,8 @@ function render(filter=''){
     const grid=document.createElement('div'); grid.className='grid';
     filtered.forEach(x=>{
       const card=document.createElement('div'); card.className='item';
-      card.innerHTML=`<span class="name">${x.name}</span><span class="price">₹${x.price}</span>`;
+      const imgPath = dishImagePath(x.name);
+      card.innerHTML=`<img class="dish-photo" loading="lazy" decoding="async" alt="${escapeHtml(x.name)}" src="${imgPath}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="dish-fallback" aria-hidden="true">${dishEmoji(cat,x.name)}</span><div class="dish-copy"><span class="name">${escapeHtml(x.name)}</span></div><span class="price">₹${x.price}</span>`;
       grid.appendChild(card);
     });
     section.appendChild(grid); menuEl.appendChild(section);
